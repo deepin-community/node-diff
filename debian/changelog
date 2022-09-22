@@ -1,0 +1,174 @@
+node-diff (5.0.0~dfsg+~5.0.1-1) unstable; urgency=medium
+
+  * Update lintian overrides
+  * Update standards version to 4.6.0, no changes needed.
+  * Use uscan group
+  * New upstream version 5.0.0~dfsg+~5.0.1
+  * Back to unstable
+
+ -- Yadd <yadd@debian.org>  Sat, 06 Nov 2021 15:57:31 +0100
+
+node-diff (5.0.0~dfsg-1) experimental; urgency=medium
+
+  * Team upload
+
+  [ Jonas Smedegaard ]
+  * Remove myself as uploader
+
+  [ Yadd ]
+  * Declare compliance with policy 4.5.1
+  * Add ctype=nodejs to component(s)
+  * Switch to dh-sequence-nodejs
+  * Set myself as uploader
+
+  [ Manas Kashyap ]
+  * New upstream version 5.0.0~dfsg
+
+ -- Manas Kashyap <manaskashyaptech@gmail.com>  Fri, 09 Jul 2021 13:19:44 +0200
+
+node-diff (4.0.2~dfsg-2) unstable; urgency=medium
+
+  * Team upload
+  * Fix @types/diff install
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 12 Nov 2020 18:21:55 +0100
+
+node-diff (4.0.2~dfsg-1) unstable; urgency=medium
+
+  * Team upload
+  * Back to unstable after successful tests (Closes: #904723, #974202)
+  * Set debhelper-compat version in Build-Depends.
+  * Update standards version to 4.5.0, no changes needed.
+  * Bump debhelper compatibility level to 13
+  * Change section to javascript
+  * Update upstream/metadata
+  * Build with node-babel7, not 6 (Closes: #966113)
+  * Fix autopkgtest when launched in an unbuild tree
+  * Apply multi-arch hints
+  * Embed @types/diff (Closes: #974202)
+  * New upstream version 4.0.2~dfsg
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 12 Nov 2020 09:29:39 +0100
+
+node-diff (4.0.1~dfsg-1) experimental; urgency=medium
+
+  [ upstream ]
+  * New release(s).
+
+  [ Jonas Smedegaard ]
+  * Update patch 2001.
+  * Add patch 2002 to use Babel 6 (not Babel 7).
+  * Build nodejs library with Babel.
+    Build-depend on node-babel-cli node-babel-preset-env.
+  * Update testsuite and autopkgtests,
+    and run testsuite with fake writable HOME.
+    Build-depend on and have autopkgtests depend on chai
+    node-babel-preset-env node-babel-register
+    (not node-should).
+  * Update copyright info: Extend coverage for main upstream author.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Thu, 29 Aug 2019 21:41:42 +0200
+
+node-diff (1.4.0~dfsg-4) unstable; urgency=medium
+
+  [ Gianfranco Costamagna ]
+  * Team upload
+
+  [ Olivier Tilloy ]
+  * Update test expectation to match upstream change in V8 (Closes: #963063)
+    - debian/patches/fix-test-with-new-nodejs.patch
+
+ -- Olivier Tilloy <olivier.tilloy@canonical.com>  Fri, 10 Jul 2020 17:41:22 +0200
+
+node-diff (1.4.0~dfsg-3) unstable; urgency=medium
+
+  * Team upload
+  * Allow deprecation output in autopkgtest (needed for mocha ≥ 7)
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 13 Feb 2020 11:25:28 +0100
+
+node-diff (1.4.0~dfsg-2) unstable; urgency=medium
+
+  * Simplify rules.
+    Stop build-depend on devscripts dh-buildinfo cdbs.
+  * Set Rules-Requires-Root: no.
+  * Update Vcs-* fields: Maintenance moved to Salsa.
+  * Update copyright info:
+    + Use https protocol in file format URL.
+    + Strip superfluous copyright signs.
+    + Extend coverage of packaging.
+    + Consistently markup email identifiers.
+  * Update git-buildpackage config:
+    + Track debian branch debian/master.
+  * Update watch file:
+    + Use file format 4.
+    + Use Github pattern.
+    + Add usage comment.
+    + Mangle filename.
+    + Use substitution strings.
+  * Install README rendered as plaintext and html,
+    or skip when nodoc requested.
+    Build-depend on pandoc.
+  * Enable testsuite.
+    Build-depend on mocha node-should perl.
+  * Add autopkgtests.
+  * Bump debhelper compatibility level to 10.
+  * Declare compliance with Debian Policy 4.4.0.
+  * Add patch 2001 to avoid privacy breaches reading the documentation.
+  * Add lintian override regarding license in License-Reference field.
+    See bug#786450.
+  * Add lintian override regarding debhelper 10.
+  * Install nodejs code under /usr/share (not /usr/lib).
+
+ -- Jonas Smedegaard <dr@jones.dk>  Thu, 29 Aug 2019 19:15:22 +0200
+
+node-diff (1.4.0~dfsg-1) unstable; urgency=medium
+
+  [ upstream ]
+  * New release(s).
+
+  [ Jonas Smedegaard ]
+  * Add README.source emphasizing that control.in file is *not* a
+    show-stopper for contributions, referring to wiki page for details.
+  * Declare compliance with Debian Policy 3.9.6.
+  * Update Vcs-* fields to use canonical URLs and cgit web frontend.
+  * Update copyright info:
+    + Extend coverage for myself.
+    + Use License-Grant and License-Reference fields.
+      Thanks to Ben Finney.
+  * Install package.json and move code to subdir.
+    Thanks to Jérémy Lal (see bug#784439).
+  * Repackage upstream tarballs, excluding images with non-DFSG licensed
+    color calibration.
+  * Modernize git-buildpackage config: Avoid "git-" prefix.
+  * Install examples.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Sun, 31 May 2015 13:32:55 +0200
+
+node-diff (1.0.4-1) unstable; urgency=low
+
+  [ upstream ]
+  * New upstream release.
+
+  [ Jonas Smedegaard ]
+  * Fix track correct upstream project (i.e. what npmjs.org tracks as
+    "diff", not "node-diff".
+  * Fix update to use new github REST ABI.
+  * Have git-import-orig suppress upstream shipped .gitignore file.
+  * Git-ignore quilt .pc subdir.
+  * Stop build-depending on node-nows, and skip testsuite for now: This
+    module uses mocha for testing, which is not yet packaged for Debian.
+  * Bump standards-version to 3.9.4.
+  * Update copyright file:
+    + Change main copyright holder, and change main license from Expat
+      to BSD-3-clause.
+  * Rerite short and long description to reflect changed module.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Mon, 25 Mar 2013 05:17:04 +0100
+
+node-diff (0.2-1) unstable; urgency=low
+
+  * Initial release.
+    Closes: Bug#688414.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Fri, 05 Oct 2012 10:36:54 +0200

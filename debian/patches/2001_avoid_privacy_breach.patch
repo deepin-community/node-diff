@@ -1,0 +1,26 @@
+Description: Avoid privacy breaches reading the documentation
+Author: Jonas Smedegaard <dr@jones.dk>
+Forwarded: not-needed
+Last-Update: 2019-08-29
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/README.md
++++ b/README.md
+@@ -1,8 +1,5 @@
+ # jsdiff
+ 
+-[![Build Status](https://secure.travis-ci.org/kpdecker/jsdiff.svg)](http://travis-ci.org/kpdecker/jsdiff)
+-[![Sauce Test Status](https://saucelabs.com/buildstatus/jsdiff)](https://saucelabs.com/u/jsdiff)
+-
+ A javascript text differencing implementation.
+ 
+ Based on the algorithm proposed in
+@@ -198,8 +195,6 @@
+ 
+ ## Compatibility
+ 
+-[![Sauce Test Status](https://saucelabs.com/browser-matrix/jsdiff.svg)](https://saucelabs.com/u/jsdiff)
+-
+ jsdiff supports all ES3 environments with some known issues on IE8 and below. Under these browsers some diff algorithms such as word diff and others may fail due to lack of support for capturing groups in the `split` operation.
+ 
+ ## License

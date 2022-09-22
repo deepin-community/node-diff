@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	babeljs --out-dir lib --source-maps=inline src
+
+override_dh_installdocs:
+	pandoc --from gfm-raw_html --to html --standalone --output README.html README.md
+	pandoc --from gfm-raw_html --to plain --output README.txt README.md
+	dh_installdocs
