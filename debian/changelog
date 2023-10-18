@@ -1,3 +1,24 @@
+node-diff (5.0.0~dfsg+~5.0.1-4) unstable; urgency=medium
+
+  * Team upload
+  * Update standards version to 4.6.1, no changes needed.
+  * Add fix for rollup 3 (Closes: #1022689)
+
+ -- Yadd <yadd@debian.org>  Fri, 28 Oct 2022 12:21:40 +0200
+
+node-diff (5.0.0~dfsg+~5.0.1-3) unstable; urgency=medium
+
+  * Fix build using upstream rollup config (missing dist/* files)
+
+ -- Yadd <yadd@debian.org>  Mon, 07 Feb 2022 15:31:24 +0100
+
+node-diff (5.0.0~dfsg+~5.0.1-2) unstable; urgency=medium
+
+  * Refresh patch
+  * Build es6 files
+
+ -- Yadd <yadd@debian.org>  Mon, 22 Nov 2021 13:52:12 +0100
+
 node-diff (5.0.0~dfsg+~5.0.1-1) unstable; urgency=medium
 
   * Update lintian overrides
