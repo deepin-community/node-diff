@@ -1,0 +1,13 @@
+Description: update to @rollup/plugin-babel
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2022-02-07
+
+--- a/rollup.config.js
++++ b/rollup.config.js
+@@ -1,4 +1,4 @@
+-import babel from 'rollup-plugin-babel';
++import babel from '@rollup/plugin-babel';
+ import pkg from './package.json';
+ 
+ export default [

@@ -5,6 +5,7 @@
 
 override_dh_auto_build:
 	babeljs --out-dir lib --source-maps=inline src
+	rollup -c
 
 override_dh_installdocs:
 	pandoc --from gfm-raw_html --to html --standalone --output README.html README.md

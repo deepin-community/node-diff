@@ -8,9 +8,11 @@ Build-Depends: debhelper-compat (= 13)
  , dh-sequence-nodejs
  , mocha <!nocheck>
  , node-babel7
+ , node-rollup-plugin-babel
  , pandoc <!nodoc>
  , perl <!nocheck>
-Standards-Version: 4.6.0
+ , rollup
+Standards-Version: 4.6.1
 Vcs-Browser: https://salsa.debian.org/js-team/node-diff
 Vcs-Git: https://salsa.debian.org/js-team/node-diff.git
 Homepage: https://github.com/kpdecker/jsdiff
